@@ -1,0 +1,500 @@
+
+.navabar{
+    width: 100%;
+    height: 65px;
+    display: flex;
+    background-color: #F5F5F5;
+    
+}
+.navar  {
+    list-style-type: none;
+    display: flex;
+    margin-left: 80px;
+}
+.navar li {
+    margin-right: 80px;
+}
+.navar li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+.navar li a:hover {
+    color:#C2093C;
+    
+}
+.logo img {
+    width: 50px;
+    height: 50px;
+    margin-left: 60px;
+    margin-top: 5px;
+}
+.navabar .fa-magnifying-glass {
+    font-size: 25px;
+    margin-top: 20px;
+    margin-left: 300px;
+}
+.navabar .fa-cart-shopping {
+    font-size: 25px;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+.sign {
+    width: 140px;
+    height: 46px;
+    border-radius: 35px;
+    background-color: #C2093C;
+    margin-top: 9px;
+    margin-left: 50px;
+    display: flex;
+}
+.fa-arrow-right-from-bracket {
+    font-size: 25px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.signin {
+    color: #fff;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.content {
+    width: 100%;
+    height: 3500px;
+    background: linear-gradient(to bottom, rgba(214, 230, 234, 1), rgba(255, 255, 255, 1));
+}
+.slide {
+    width: 100%;
+    height: 690px;
+    display: flex;
+}
+.slide-text {
+    width: 526px;
+    height: 220px;
+    margin-top: 213px;
+    margin-left: 119px;
+}
+.largeletters {
+    font-size: 45px;
+}
+.minuscule {
+    font-size: 20px;
+    margin-top: 35px;
+}
+.slide-img {
+    width: 700px;
+    height: 400px;
+    margin-top: 150px;
+    
+}
+.box {
+    position: absolute;
+}
+.box-a {
+    left: 850px;
+    
+}
+.box-b {
+    top: 510px;
+    left: 1100px;
+    z-index: 2;
+}
+.box-c {
+    top: 500px;
+    left: 720px;
+    z-index: 3;
+}
+.box-d {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    background-color: #ae4964;
+    right: 1390px;
+    top:350px;
+    z-index: 4;
+
+}
+.box-g {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: #A5012E;
+    left: 700px;
+    top: 360px;
+    z-index: 5;
+}
+.box-h {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    background-color: #ae4964;
+    left: 1250px;
+    top: 160px;
+    z-index: 6;
+    backdrop-filter: blur(5px);
+}
+.box-e {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    background-color: #A5012E;
+    left: 1390px;
+    top: 650px;
+    z-index: 7;
+}
+.text-group1 {
+    width: 100%;
+    margin-top: 30px;
+    height: 200px;
+    
+    display: flex;
+    justify-content: center;
+    
+}
+.textgroup1 {
+    width: 424px;
+    height: 50px;
+    color: #A5012E;
+    font-weight:bold ;
+    font-size: 25px;
+    text-align: center ;
+}
+
+.textgroup2{
+    font-size: 40px;
+    text-align: center ;
+}
+.textgroup3 {
+    margin-top: 20px;
+    text-align: center 
+}
+.service {
+    width: 100%;
+    height: 400px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.service-group {
+    width: 1100px;
+    height: 350px;
+    display: flex;
+
+}
+.serviceroom1 {
+    width: 250px;
+    height: 350px;
+    
+}
+.serviceroom2 {
+    width: 250px;
+    height: 350px;
+    margin-left: 172px;
+}
+.serviceroom3 {
+    width: 250px;
+    height: 350px;
+    margin-left: 172px;
+}
+.service-img {
+    margin-top: 25px;
+    margin-left: 35px;
+}
+.service-text1 {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 30px;
+}
+.service-text2 {
+    text-align: center;
+    font-size: 15px;
+}
+.service2{
+    width: 100%;
+    height: 470px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.service2-group {
+    width: 1100px;
+    height: 350px;
+    display: flex;
+}
+.serviceroom4 {
+    width: 280px;
+    height: 390px;
+    border-radius: 18px;
+    background-color: #DADDE0;
+    
+}
+.serviceroom5 {
+    width: 280px;
+    height: 390px;
+    border-radius: 18px;
+    margin-left: 130px;
+    background-color: #DADDE0;
+}
+.serviceroom6 {
+    width: 280px;
+    height: 390px;
+    border-radius: 18px;
+    margin-left: 130px;
+    background-color: #DADDE0;
+}
+.servicevuong{
+    width: 280px;
+    height: 130px;
+    background-color: #fff;
+    border-radius: 18px;
+}
+.serviceroom4 .fa-heart {
+    margin-left: 240px;
+    font-size: 20px;
+    margin-top: 5px;
+}
+.service2-img {
+    margin-left: 20px;
+    
+}
+.service2-img1 {
+    margin-left: 25px;
+}
+.buy {
+    display: flex;
+    margin-top: 20px;
+    
+}
+.service2-text {
+    font-weight: bold;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 20px;
+}
+.service2-text1 {
+    text-align: center;
+}
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 15px;
+}
+.cart {
+    font-size: 20px;
+    margin-left: 177px;
+}
+.button {
+    border-radius: 20px;
+    width: 120px;
+    height: 40px;
+    background-color: #A5012E;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    color: #fff;
+    margin-left: 660px;
+}
+.Evaluate {
+    width: 100%;
+    height: 480px;
+    margin-top: 50px;
+    display: flex;
+}
+.Evaluate-img {
+    width: 471px;
+    height: 450px;
+    margin-left: 70px;
+}
+.evaluate-img1 {
+    width: 431px;
+    height: 182px;
+   
+    margin-top: 5px;
+    margin-left: 4px;
+}
+.evaluate-img2 {
+    width: 431px;
+    height: 182px;
+    margin-top: 20px;
+    margin-left: 4px;
+    display: flex;
+}
+.evaluate-img21 {
+    width: 220px;
+    height: 182px;
+    
+}
+.evaluate-img22 {
+    width: 220px;
+    height: 182px;
+  
+    margin-left: px;
+}
+.Evalute-people {
+    width: 471px;
+    height: 450px;
+    margin-left: 70px;
+}
+.evalute-text1 {
+    font-size: 20px;
+    margin-top: 20px;
+    color: #A5012E;
+    font-weight: bold;
+}
+.evalute-text2 {
+    font-size: 40px;
+    margin-top: 20px;
+    
+}
+.evalute-card {
+    width: 421px;
+    height: 170px;
+    border-radius: 10px;
+    margin-top: 87px;
+    margin-left: 20px;
+    background-color: #d7d7d7;
+}
+.evalute-avatar {
+    display: flex;
+}
+.evalute-card .evalute-avatar {
+    width: 371px;
+    height: 50px;
+    margin-top: 80px;
+    margin-left: 20px;
+}
+.evalute-card .evalute-tec {
+    width: 371px;
+    height: 70px;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+ .evalute-avatar1 .anhbe {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-top: 15px;
+}
+.evalute-avatar .evalute-avatar2 {
+    margin-left: 30px;
+    margin: 15px;
+
+}
+.elalute-avatar-star .fa-star {
+    font-size: 16px;
+    color: gold;
+}
+.img-sign {
+    width: 1180px;
+    height: 334px;
+    background-image: url(img/unsplash_2lWGQ02DGL8.png);
+    margin-top: 40px;
+    margin-left: 120px;
+    
+    text-align: center;
+    justify-content: center;
+}
+.img-signtext {
+    font-size: 50px;
+    color: #fff;
+    margin-top: 30px;
+}
+.img-signbutton {
+    font-size: 40px;
+    width: 200px;
+    height: 60px;
+    background-color: #A5012E;
+    color: #fff;
+    border-radius: 20px;
+    text-align: center;
+    margin-left: 500px;
+    margin-top: 40px;
+}
+.footer {
+    width: 100%;
+    height: 326px;
+    background-color: #D6E6EA;
+    margin-top: 60px;
+}
+.footer .footer-group {
+    width: 1200px;
+    height: 276px;
+    margin-top: 90px;
+    margin-left: 110px;
+    display: flex;
+    
+}
+.footer-room1 {
+    width: 300px;
+    height: 276px;
+}
+.footer-room2 {
+    width: 300px;
+    height: 276px;
+    
+}
+.footer-room3 {
+    width: 300px;
+    height: 276px;
+}
+.footer-room4 {
+    width: 300px;
+    height: 276px;
+}
+.footer-room-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 100px;
+    
+}
+.footer-room-logo .mew {
+    width: 90px;
+    height: 90px;
+
+}
+.footer-room-text {
+    width: 300px;
+    height: 60px;
+    text-align: center;
+    margin-top: 20px;
+}
+.footer-room-logoth {
+    width: 300px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.footer-room-logoth .fa-instagram{
+    font-size: 40px;
+    
+}
+.footer-room-logoth .fa-facebook{
+    font-size: 40px;
+    color: #C2093C;
+    margin-left: 20px;
+}
+.footer-room-logoth .fa-twitter{
+    font-size: 40px;
+    margin-left: 20px;
+}
+.footer-roomtext {
+    width: 300px;
+    height: 60px;
+    margin-left: 60px;
+}
+.footer-roomtext1 {
+    width: 300px;
+    height: 60px;
+    margin-left: 60px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #C2093C;
+}
