@@ -1,6 +1,6 @@
-function Slide() {
-    return(
-        <div></div>
-    )
-}
-export default Slide
+// function Slide() {
+//     return(
+//         <div></div>
+//     )
+// }
+// export default Slide

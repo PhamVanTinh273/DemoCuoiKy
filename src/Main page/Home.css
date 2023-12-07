@@ -1,4 +1,4 @@
-
+/* 
 .navabar{
     width: 100%;
     height: 65px;
@@ -41,21 +41,28 @@
     margin-left: 40px;
 }
 .sign {
-    width: 140px;
+    width: 170px;
     height: 46px;
     border-radius: 35px;
-    background-color: #C2093C;
-    margin-top: 9px;
+    
+    margin-top: 5px;
     margin-left: 50px;
     display: flex;
 }
+.sign :hover{
+    background: #A5012E;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+
+}
+
+.signin {
+    margin-left: 10px;
+    margin-top: 12px;
+    font-size: 17px;
+}
 .fa-arrow-right-from-bracket {
     font-size: 25px;
-    margin-left: 20px;
-    margin-top: 10px;
-}
-.signin {
-    color: #fff;
     margin-left: 20px;
     margin-top: 10px;
 }
@@ -497,4 +504,4 @@
     font-size: 20px;
     font-weight: bold;
     color: #C2093C;
-}
+} */

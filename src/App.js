@@ -1,11 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
-import Home from './Main page/Home';
-import Slide from './Main page/Slide';
+import Slide from './components/Slides/Slide';
+import Home from './components/Home/Home';
+import Navbar from './components/Navbar/Navbar';
+
 
 function App() {
-  return (<div>
-    <Home/>
+  
+  return (
+  <div className='container'>
+    <Navbar/>
+    {/* <Home/> */}
+    
+    
     
     </div>
   );

@@ -1,0 +1,131 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "Product 1",
+        "description": "This is the description of Product 1.",
+        "price": 19.99,
+        "image": "https://example.com/product1.jpg",
+        "category": "Category 1",
+        "brand": "Brand 1",
+        "rating": 4.5,
+        "quantity": 10,
+        "attributes": {
+          "size": "Medium",
+          "color": "Blue",
+          "weight": "0.5 kg"
+        },
+        "additionalInfo": {
+          "createdDate": "2023-11-28",
+          "updatedDate": "2023-11-28",
+          "createdBy": "John Doe",
+          "updatedBy": "Jane Smith"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Product 2",
+        "description": "This is the description of Product 2.",
+        "price": 29.99,
+        "image": "https://example.com/product2.jpg",
+        "category": "Category 2",
+        "brand": "Brand 2",
+        "rating": 3.8,
+        "quantity": 5,
+        "attributes": {
+          "size": "Large",
+          "color": "Red",
+          "weight": "0.7 kg"
+        },
+        "additionalInfo": {
+          "createdDate": "2023-11-27",
+          "updatedDate": "2023-11-27",
+          "createdBy": "Jane Smith",
+          "updatedBy": "John Doe"
+        }
+      },
+      {
+        "id": 3,
+        "name": "Product 3",
+        "description": "This is the description of Product 3.",
+        "price": 39.99,
+        "image": "https://example.com/product3.jpg",
+        "category": "Category 1",
+        "brand": "Brand 1",
+        "rating": 4.2,
+        "quantity": 8,
+        "attributes": {
+          "size": "Small",
+          "color": "Green",
+          "weight": "0.3 kg"
+        },
+        "additionalInfo": {
+          "createdDate": "2023-11-26",
+          "updatedDate": "2023-11-26",
+          "createdBy": "John Doe",
+          "updatedBy": "Jane Smith"
+        }
+      },
+      {
+        "id": 4,
+        "name": "Product 4",
+        "description": "This is the description of Product 4.",
+        "price": 49.99,
+        "image": "https://example.com/product4.jpg",
+        "category": "Category 3",
+        "brand": "Brand 3",
+        "rating": 4.7,
+        "quantity": 3,
+        "attributes": {
+          "size": "Medium",
+          "color": "Black",
+          "weight": "0.6 kg"
+        },
+        "additionalInfo": {
+          "createdDate": "2023-11-25",
+          "updatedDate": "2023-11-25",
+          "createdBy": "Jane Smith",
+          "updatedBy": "John Doe"
+        }
+      },
+      {
+        "id": 5,
+        "name": "Product 5",
+        "description": "This is the description of Product 5.",
+        "price": 59.99,
+        "image": "https://example.com/product5.jpg",
+        "category": "Category 2",
+        "brand": "Brand 2",
+        "rating": 3.5,
+        "quantity": 12,
+        "attributes": {
+          "size": "Large",
+          "color": "White",
+          "weight": "0.8 kg"
+        },
+        "additionalInfo": {
+          "createdDate": "2023-11-24",
+          "updatedDate": "2023-11-24",
+          "createdBy": "John Doe",
+          "updatedBy": "Jane Smith"
+        }
+      },
+      {
+        "id": 6,
+        "name": "Product 6",
+        "description": "This is the description of Product 6.",
+        "price": 69.99,
+        "image": "https://example.com/product6.jpg",
+        "category": "Category 1",
+        "brand": "Brand 1",
+        "rating": 4,
+        "quantity": 12,
+        "attributes": {
+          "size": "Large",
+          "color": "White",
+          "weight": "0.8 kg"
+        }
+      }
+    
+    ]
+}
