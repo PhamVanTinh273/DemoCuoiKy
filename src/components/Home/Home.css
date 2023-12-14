@@ -420,11 +420,17 @@
     text-align: center;
     margin-right: 500px;
     margin-top: 40px;
-    font-size: 10px;
+    font-size: 8px;
     
 }
+.login-home{
+    align-items: center;
+    margin-top: -10px;
+    font-size: 25px;
+    position: relative;
+}
 .img-signbutton:hover{
-    background-color: green;
+    background-color: #5a2c2c;
 
 }
 
@@ -511,4 +517,122 @@
     font-size: 20px;
     font-weight: bold;
     color: #C2093C;
+}
+
+
+
+
+
+
+.name-menu{
+    background: white ;
+    display: flex;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+  
+    
+    
+
+}
+.color-cart:hover{
+    color: rgb(128, 0, 28);
+    cursor: pointer;
+}
+.style-text{
+    font-weight: bold;
+}
+.dogs-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 4rem;
+    text-align: center;
+}
+.dogs-container{
+    width: 80%;
+    margin:0 auto  ;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 20px;
+    background: radial-gradient(rgba(214, 230, 234, 1));
+
+}
+.container {
+    background: radial-gradient(rgba(214, 230, 234, 2), transparent);
+}
+.dogs{
+    background-color: #f5f5f5;
+    padding: 1rem;
+    border-radius: 14px;
+    
+    height: 330px;
+    margin-bottom: 1.5rem;
+    display: grid;
+    align-items: center;
+    grid-template-areas: 
+    "img info"
+    "img info"
+    "desc desc"
+    "price price"
+    "btn   btn";
+}
+.dogs-info{
+    grid-area: info;
+}
+.dogs-img-container{
+    grid-area: img;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+
+}
+.container.text-center.name-menu {
+    margin-top: 35px;
+    border-top: groove;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+.dogs-desc{
+    grid-area: desc;
+}
+.dogs-price{
+    font-weight: 700;
+    margin: 1rem 0 1rem 0;
+    grid-area: price;
+}
+.dogs-btn{
+    padding: 0.35rem;
+    border-radius: 14px;
+    cursor: pointer;
+    background-color: #e8e8e4;
+    grid-area: btn;
+    border: none;
+    font-size: 1.25rem;
+    transition: 100ms ease-in-out;
+}
+.dogs-btn-disabled{
+    padding: 0.35rem;
+    border-radius: 14px;
+    background-color:rgb(193, 111, 134);
+    grid-area: btn;
+    border: none;
+    font-size: 1.25rem;
+    transition: 100ms ease-in-out;
+}
+.dogs-btn:hover{
+    background-color:rgb(199, 46, 89);
+    color: rgb(255, 255, 255);
+}
+.dog-img{
+    width: 100%;
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.container.text-center.name-menu {
+    margin-top: 35px;
+    border-top: groove;
 }

@@ -1,131 +1,81 @@
-{
-    "products": [
-      {
+
+    {
+      "user":[
+        {
         "id": 1,
-        "name": "Product 1",
-        "description": "This is the description of Product 1.",
-        "price": 19.99,
-        "image": "https://example.com/product1.jpg",
-        "category": "Category 1",
-        "brand": "Brand 1",
-        "rating": 4.5,
-        "quantity": 10,
-        "attributes": {
-          "size": "Medium",
-          "color": "Blue",
-          "weight": "0.5 kg"
-        },
-        "additionalInfo": {
-          "createdDate": "2023-11-28",
-          "updatedDate": "2023-11-28",
-          "createdBy": "John Doe",
-          "updatedBy": "Jane Smith"
-        }
+        "name": "Mie Ramen",
+        "breed": "FMSTYLE",   
+        "price": "20.2",
+        "description": "lorem ipsum",
+        "imageUrl":
+          "https://www.blibli.com/friends-backend/wp-content/uploads/2022/07/bahan-bahan-membuat-ramen.jpg",
       },
       {
         "id": 2,
-        "name": "Product 2",
-        "description": "This is the description of Product 2.",
-        "price": 29.99,
-        "image": "https://example.com/product2.jpg",
-        "category": "Category 2",
-        "brand": "Brand 2",
-        "rating": 3.8,
-        "quantity": 5,
-        "attributes": {
-          "size": "Large",
-          "color": "Red",
-          "weight": "0.7 kg"
-        },
-        "additionalInfo": {
-          "createdDate": "2023-11-27",
-          "updatedDate": "2023-11-27",
-          "createdBy": "Jane Smith",
-          "updatedBy": "John Doe"
-        }
+        "name": "Salad Tahu",
+        "breed": "HUE",
+        "price": "15.5",
+        "description": "lorem ipsum",
+        "imageUrl":
+          "https://cdn.tgdd.vn/Files/2020/06/22/1264687/salad-la-gi-salad-dressing-la-gi-phan-loai-va-ca.jpg",
       },
       {
         "id": 3,
-        "name": "Product 3",
-        "description": "This is the description of Product 3.",
-        "price": 39.99,
-        "image": "https://example.com/product3.jpg",
-        "category": "Category 1",
-        "brand": "Brand 1",
-        "rating": 4.2,
-        "quantity": 8,
-        "attributes": {
-          "size": "Small",
-          "color": "Green",
-          "weight": "0.3 kg"
-        },
-        "additionalInfo": {
-          "createdDate": "2023-11-26",
-          "updatedDate": "2023-11-26",
-          "createdBy": "John Doe",
-          "updatedBy": "Jane Smith"
-        }
+        "name": "Roti Bakar",
+        "breed": "YODY",
+        "price": "17.3",
+        "description": "lorem ipsum",
+        "imageUrl":
+          "https://www.dapurkobe.co.id/wp-content/uploads/roti-bakar-sosis-pedas.jpg",
       },
       {
         "id": 4,
-        "name": "Product 4",
-        "description": "This is the description of Product 4.",
-        "price": 49.99,
-        "image": "https://example.com/product4.jpg",
-        "category": "Category 3",
-        "brand": "Brand 3",
-        "rating": 4.7,
-        "quantity": 3,
-        "attributes": {
-          "size": "Medium",
-          "color": "Black",
-          "weight": "0.6 kg"
-        },
-        "additionalInfo": {
-          "createdDate": "2023-11-25",
-          "updatedDate": "2023-11-25",
-          "createdBy": "Jane Smith",
-          "updatedBy": "John Doe"
-        }
+        "name": "Hamburgur",
+        "breed": "BOVIND",
+        "price": "18.5",
+        "description": "lorem ipsum",
+        "imageUrl":
+          "https://cdn.vntrip.vn/cam-nang/wp-content/uploads/2018/08/mon-ngon-han-quoc16.jpg",
       },
       {
         "id": 5,
-        "name": "Product 5",
-        "description": "This is the description of Product 5.",
-        "price": 59.99,
-        "image": "https://example.com/product5.jpg",
-        "category": "Category 2",
-        "brand": "Brand 2",
-        "rating": 3.5,
-        "quantity": 12,
-        "attributes": {
-          "size": "Large",
-          "color": "White",
-          "weight": "0.8 kg"
-        },
-        "additionalInfo": {
-          "createdDate": "2023-11-24",
-          "updatedDate": "2023-11-24",
-          "createdBy": "John Doe",
-          "updatedBy": "Jane Smith"
-        }
+        "name": "Chicken Roast",
+        "breed": "LV",
+        "price": "35.2",
+        "description": "lorem ipsum",
+        "imageUrl":
+          "https://hips.hearstapps.com/hmg-prod/images/dutch-oven-roast-chicken-recipe-2-1664219307.jpg?crop=0.6666666666666667xw:1xh;center,top&resize=1200:*",
       },
       {
         "id": 6,
-        "name": "Product 6",
-        "description": "This is the description of Product 6.",
-        "price": 69.99,
-        "image": "https://example.com/product6.jpg",
-        "category": "Category 1",
-        "brand": "Brand 1",
-        "rating": 4,
-        "quantity": 12,
-        "attributes": {
-          "size": "Large",
-          "color": "White",
-          "weight": "0.8 kg"
-        }
+        "name": "Salad Salmon",
+        "breed": "SAVANI",
+        "price": "20.0",
+        "description": "lorem ipsum",
+        "imageUrl":
+          "https://www.recipetineats.com/wp-content/uploads/2019/07/Salmon-Salad_1-SQ.jpg",
+      },
+      {
+        "id": 7,
+        "name": "Chicken Friel",
+        "breed": "YODY",
+        "price": "22.1",
+        "description": "lorem ipsum",
+        "imageUrl":
+          "https://www.licious.in/blog/wp-content/uploads/2020/12/Pan-Fried-Chicken.jpg",
+      },
+      {
+        "id": 8,
+        "name": "Cartilage",
+        "breed": "SAVANI",
+        "price": "30.0",
+        "description": "lorem ipsum",
+        "imageUrl":
+          "https://trungtamtienghan.edu.vn/uploads/blog/2015_06/mon-an-tieng-han1_1.jpg",
       }
-    
-    ]
-}
+
+      ]
+    }
+        
+
+

@@ -13,10 +13,79 @@ import me1 from './img/me1.png';
 import me2 from './img/me2.png';
 import be from './img/image-ngam-nhin-100-anh-be-gai-cute-dang-yeu-nhu-thien-than-167755603299485.jpg';
 import mew from './img/New_Logo.webp';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import MenuPage from '../Menu/MenuPage';
+import MenuCard from '../Menu/MenuCard';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+import ItemUser from '../Contact/itemUser';
 
 
-function Home(){
+const Home = (props)=>{
+
+
+  let [users, setUsers] = useState([]);
+  let [deleted, setDeleted] = useState(false);
+
+  function handleDelete(id) {
+    let confirm = window.confirm("Are you sure?");
+    if (confirm) {
+      axios
+        .delete(`http://localhost:8080/v1/dogs/${id}`)
+        .then((respone) => {
+          console.log(respone);
+          setDeleted(!deleted);
+        })
+        .catch((err) => {
+            if (err.response) {
+                // Máy chủ trả về một mã phản hồi, như 404, 500, v.v.
+                console.log("Server responded with a status code:", err.response.status);
+                console.log("Response data:", err.response.data);
+              } else if (err.request) {
+                // Yêu cầu không nhận được phản hồi từ máy chủ
+                console.log("No response received from the server");
+              } else {
+                // Có lỗi khi thiết lập yêu cầu, xử lý lỗi khác
+                console.error("Error setting up the request:", err.message);
+              }
+          console.log(err);
+        });
+    }
+  }
+
+  const [menus, setMenus] = useState([]);
+
+useEffect(() => {
+  axios
+    .get("http://localhost:8080/v1/dogs")
+    .then((response) => {
+      setMenus(response.data);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+}, []);
+
+ 
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:8080/v1/dogs")
+      .then((respone) => {
+        setUsers(respone.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, [deleted]);
+
+  let datas = users.map((item, index) => {
+    return (
+      <ItemUser handleDelete={handleDelete} key={`user_${index}`} {...item} />
+    );
+  });
+
+    const {allMenus}= props;
     return(
         
         <div className='content'>
@@ -55,27 +124,28 @@ function Home(){
                 </div>
 
             </div>
+            
             <div className='service'>
                 <div className='service-group'>
                     <div className='serviceroom1'>
                         <div className='service-img'>
                         <img src={oder} alt="Logo" />
                         </div>
-                        <div className='service-text1'>Easy To Oder</div>
+                        <Link to="/menu" style={{ textDecoration: 'none' }}><div className='service-text1'>Easy To Oder</div></Link>
                         <div className='service-text2'>You only order through <br></br> the app</div>
                     </div>
                     <div className='serviceroom2'>
                     <div className='service-img'>
                         <img src={giaohang} alt="Logo" />
                         </div>
-                        <div className='service-text1'>Easy To Oder</div>
+                        <Link to="/menu" style={{ textDecoration: 'none' }}><div className='service-text1'>Easy To Oder</div></Link>
                         <div className='service-text2'>You only order through <br></br> the app</div>
                     </div>
                     <div className='serviceroom3'>
                     <div className='service-img'>
                         <img src={ship} alt="Logo" />
                         </div>
-                        <div className='service-text1'>Easy To Oder</div>
+                        <Link to="/menu" style={{ textDecoration: 'none' }}><div className='service-text1'>Easy To Oder</div></Link>
                         <div className='service-text2'>You only order through <br></br> the app</div>
                         
                     </div>
@@ -94,7 +164,7 @@ function Home(){
 
 
 
-            <div className='service2'>
+            {/* <div className='service2'>
                 <div className='service2-group'>
                     <div className='serviceroom4'>
                         <i class="fa-solid fa-heart"></i>
@@ -125,7 +195,10 @@ function Home(){
                         
                             <div className='buy'>
                                 <div className='price'>$17.7</div>
-                                <div className='cart'><i class="fa-solid fa-cart-shopping"></i></div>
+                                <div className='cart'>
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                    
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -152,11 +225,60 @@ function Home(){
 
                 </div>
 
+            </div> */}
+
+            
+               
+
+                {/* <div class="container text-center">
+                <div class="row">
+                    <div class="col">
+                    <div className="card">
+                        <img src={imageUrl} class="card-img-top" alt="..."/>
+                        <div className="card-body">
+                            <h5 className="card-title">Card title</h5>
+                            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+            
+                    
+                    
+                    </div>
+                    <div class="col">
+                    <div className="card">
+                        <img src={imageUrl} class="card-img-top" alt="..."/>
+                        <div className="card-body">
+                            <h5 className="card-title">Card title</h5>
+                            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+            
+                    </div>
+                    <div class="col">
+                    <div className="card">
+                        <img src={imageUrl} class="card-img-top" alt="..."/>
+                        <div className="card-body">
+                            <h5 className="card-title">Card title</h5>
+                            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
             </div>
+            
+                    </div>
+                </div>
+                </div> */}
+            
+            
 
 
 
-            <div className='button'> More menu</div>
+            
+
+
+            <Link to="/menu" style={{ textDecoration: 'none' }}><button className='button'>More menu</button></Link>
+            
 
 
 
@@ -182,7 +304,23 @@ function Home(){
                         <div className='evalute-text2'>What Our Customers say <br></br> About Us</div>
                         
                     </div>
-                    <div className='evalute-card'>
+
+
+
+
+
+                    <table className="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Email</th>
+                        <th scope="col">Feedback</th>
+                        
+                    </tr>
+                    </thead>
+                    <tbody>{datas}</tbody>
+                </table>
+                    
+                    {/* <div className='evalute-card'>
                         <div className='evalute-avatar'>
                             <div className='evalute-avatar1'>
                              <img className='anhbe' src={be} alt="Logo" />
@@ -202,7 +340,7 @@ function Home(){
                             "lorem ipsum dolor sit amet, consectetur<br></br>
                             sdipiscing elit ut aliquam, purus sit amet luchtus<br></br> venenatls"
                         </div>
-                    </div>
+                    </div> */}
 
 
                 </div>
@@ -211,7 +349,13 @@ function Home(){
 
             <div className='img-sign'>
                     <div className='img-signtext'>join our member and get <br></br> discount up to 50%</div>
-                    <Link to="/signin"><button className='img-signbutton'>Sign in</button></Link>
+                    <Link to="/login" style={{ textDecoration: 'none' }}><button className='img-signbutton'>
+                        <div className='login-home'>
+                        Login
+
+                        </div>
+                        
+                    </button></Link>
             </div>
 
 
@@ -231,7 +375,10 @@ function Home(){
                     </div>
                     <div className='footer-room2'>
                         <div className='footer-roomtext1' >Company</div>
+                        <Link to="/contact">
                         <div className='footer-roomtext' >About Us</div>
+                        </Link>
+                        
                         <div className='footer-roomtext' >Career</div>
                         <div className='footer-roomtext' >How It Work</div>
                     </div>

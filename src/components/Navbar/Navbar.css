@@ -66,10 +66,10 @@
     width: 120px;
     height: 46px;
     border-radius: 35px;
-    margin-left: 0px;
-    display: flex;
-    margin-bottom: 13px;
+    align-items: center;
+    margin-top: -4px;
     margin-left: 10px;
+  position: relative;
 }
 .sign :hover{
     background: #A5012E;
@@ -79,9 +79,11 @@
 }
 
 .signin {
-    margin-left: 10px;
-    margin-top: 12px;
+    margin-left: 4px;
+    margin-top: 3px;
     font-size: 17px;
+    position: relative;
+    
 }
 .fa-arrow-right-from-bracket {
     font-size: 25px;

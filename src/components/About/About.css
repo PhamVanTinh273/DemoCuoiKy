@@ -1,0 +1,25 @@
+.img{
+    margin-left: 400px;
+    background-color: rgb(239, 198, 144);
+    height: 50%;
+    width: 50%;
+    
+}
+.img1{
+    margin-left: 250px;
+    border: none;
+    filter: blur(2.5px);
+}
+
+.background{
+    background-color: rgba(235, 179, 0, 1);
+    border: none;
+}
+.caption{
+  color: rgb(43, 80, 80);
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}

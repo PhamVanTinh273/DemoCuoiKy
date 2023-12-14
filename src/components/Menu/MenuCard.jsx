@@ -1,9 +1,14 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../../Contexts/CartContext";
 import "./Menu.css";
 import { IoCartOutline } from "react-icons/io5";
+import axios from "axios";
+
+
+
+
 const MenuCard = (props) =>{
-    const{id, name, breed, description, price, imageUrl} = props;
+    const{id, name, description, price, imageUrl} = props;
     const {addToCart, setTotal}= useContext(CartContext);
     const [isAdded, setAdded] = useState(false);
     const handleClick = ()=>{
@@ -16,8 +21,11 @@ const MenuCard = (props) =>{
         addToCart((item)=>[...item, newItems]);
         setTotal((total)=>(total +=Number(price)));
     };
+
+
     
     return(
+        
         <>
         <section className="dogs">
             
@@ -40,7 +48,7 @@ const MenuCard = (props) =>{
                     </div>
                     <div className="col-6 color-cart">
                     {isAdded ? (
-                <button disabled className="dogs-btn-disabled">ADDED</button>
+                <button disabled className="dogs-btn-disabled">Added</button>
             ) : (
                 <div>
 
@@ -58,10 +66,8 @@ const MenuCard = (props) =>{
                 </div>
             </div>
             </div>
-            
-            
-            
         </section>
+        
         </>
     );
 };

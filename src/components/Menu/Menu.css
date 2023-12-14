@@ -9,7 +9,7 @@
 
 }
 .color-cart:hover{
-    color: green;
+    color: rgb(128, 0, 28);
     cursor: pointer;
 }
 .style-text{
@@ -30,6 +30,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 20px;
+    background: radial-gradient(rgba(214, 230, 234, 1));
+
+}
+.container {
+    background: radial-gradient(rgba(214, 230, 234, 2), transparent);
 }
 .dogs{
     background-color: #f5f5f5;
@@ -57,6 +62,12 @@
     overflow: hidden;
 
 }
+.container.text-center.name-menu {
+    margin-top: 35px;
+    border-top: groove;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
 .dogs-desc{
     grid-area: desc;
 }
@@ -78,20 +89,34 @@
 .dogs-btn-disabled{
     padding: 0.35rem;
     border-radius: 14px;
-    background-color: #94d2bd;
+    background-color:rgb(193, 111, 134);
     grid-area: btn;
     border: none;
     font-size: 1.25rem;
     transition: 100ms ease-in-out;
 }
 .dogs-btn:hover{
-    background-color: #0a9396;
-    color: white;
+    background-color:rgb(199, 46, 89);
+    color: rgb(255, 255, 255);
 }
 .dog-img{
     width: 100%;
-    width: 120px;
-    height: 120px;
+    width: 130px;
+    height: 130px;
     object-fit: cover;
     border-radius: 50%;
+}
+.container.text-center.name-menu {
+    margin-top: 35px;
+    border-top: groove;
+}
+.search-bar{
+    text-align: center;
+    
+}
+.search-mar{
+    width: 80%;
+    margin-bottom: 20px;
+    
+    
 }

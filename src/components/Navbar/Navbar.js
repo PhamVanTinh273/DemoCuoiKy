@@ -10,12 +10,35 @@ import "./Navbar.css"
 import Home from "../Home/Home";
 import mew from "./img/615px-Food_Network_New_Logo 2 1 (3).png"
 import MenuPage from "../Menu/MenuPage";
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 import { CartContext } from "../../Contexts/CartContext";
+import MenuCard from "../Menu/MenuCard";
+
+
+
+
+// const allFoods = [
+//   { id: 1, name: 'Mie Ramen', description: 'lorem ipsum' },
+//   { id: 2, name: 'Salad Tahu', description: 'lorem ipsum' },
+//   { id: 3, name: 'Mie Roti Bakar', description: 'lorem ipsum' },
+//   { id: 4, name: 'Hamburgur', description: 'lorem ipsum' },
+//   { id: 5, name: 'Chicken Roast', description: 'lorem ipsum' },
+//   { id: 6, name: 'Salad Salmon', description: 'lorem ipsum' },
+//   { id: 7, name: 'Chiken Friel', description: 'lorem ipsum' },
+//   { id: 8, name: 'Cartilage', description: 'lorem ipsum' },
+  
+//   // Thêm các món ăn khác
+// ];
 
 
 function Navbar(){
+  const { handleSearchInputChange, handleSearchButtonClick, isLoading } =
+    useContext(CartContext);
+
+
+
+
     
     const [allMenus, setMenus] = useState([]);
     const [myCart, addToCart] = useState([{}]);
@@ -29,6 +52,18 @@ function Navbar(){
     getData().then((res) => setMenus(res.data));
     getData().catch((err)=>console.log(err));
   }, [])
+
+
+
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const handleSearch = (e) => {
+    setSearchTerm(e.target.value);
+  };
+
+  const filteredMenus = allMenus.filter(menu =>
+    menu.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
     return(
         <>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -41,32 +76,64 @@ function Navbar(){
             </button>
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className='navar'>
-                        <Link to="/home">
+                        <Link to="/home" style={{ textDecoration: 'none' }}>
                             <li><a href="/">Home</a></li>
                         </Link>
                         
-                        <Link to="/menu"><li><a href="/">Menu</a></li></Link>
-                        <Link to="/about"><li><a href="/about">About</a></li></Link>
-                        <Link to="/contact"><li><a href="/contact">Contact</a></li></Link>
-                    </ul>
+                        <Link to="/menu" style={{ textDecoration: 'none' }}><li><a href="/">Menu</a></li></Link>
+                        <Link to="/about" style={{ textDecoration: 'none' }}><li><a href="/about">Contact</a></li></Link>
+                        <Link to="/contact" style={{ textDecoration: 'none' }}><li><a href="/contact">About</a></li></Link>
+                    
 
                     
-                    <Link to="cart"><i className="fa-solid fa-cart-shopping cartnavbar"></i></Link>
-              
+                    <Link to="cart" style={{ textDecoration: 'none' }}><i className="fa-solid fa-cart-shopping cartnavbar"></i></Link>
 
-              <form className="d-flex" role="search">
+
+                  <div>
+                  <div className="search-bar">
+                    <input
+                    className='search-mar'
+                      type="text"
+                      placeholder="Tìm kiếm..."
+                      value={searchTerm}
+                      onChange={handleSearch}
+
+                    /> 
+                  </div>
+                  <section className="dogs-container">
                 
-                <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"></input>
-                <button className="btn btn-outline-success" type="submit">Search</button>
-              </form>
-              <Link to="/signin">
+                {filteredMenus.map((menu) => (
+                  <>
+                  </>
+                  // <div key={menu.id}>
+                  //   <MenuCard
+                  //     id={menu.id}
+                  //     name={menu.name}
+                  //     breed={menu.breed}
+                  //     description={menu.description}
+                  //     price={menu.price}
+                  //     imageUrl={menu.imageUrl}
+                  //   />
+                  // </div>
+                ))}
+              </section>
+                  
+                  </div>
+                  <Link to="/login" style={{ textDecoration: 'none' }}>
                         <div className='sign'>         
                         <button className='sign'>
-                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        <i class="fa-solid fa-arrow-right-from-bracket mt-1"></i>
                             <div className='signin'>Singin</div>
                         </button>
                         </div>
                     </Link>
+                  
+                    </ul>
+                    
+                
+
+              
+              
 
 
               
@@ -84,6 +151,8 @@ function Navbar(){
                   <Route path='/cart' element={<Cart/>}/>
                   <Route path='/signin' element={<RegisterPage/>}/>
                   <Route path='/login' element={<Login/>}/>
+                  
+
                 </Routes>
             </CartContext.Provider>
                 

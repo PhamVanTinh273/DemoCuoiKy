@@ -1,10 +1,16 @@
-.register-page{
+/* .register-page-login{
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: -145px;
+    margin-left: 770px;
+    width: 450px;
+    
 
-}
+    
+
+} */
 /* .register-form-container{
     width: 520px;
     padding: 48px;
@@ -12,7 +18,7 @@
     background: #fff ;
 
 } */
-.form-label{
+/* .form-label{
     width: 100%;
     display: block;
 
@@ -29,9 +35,9 @@
 
 .submit-btn{
     height: 40px;
-    width: 120px;
+    width: 100px;
     cursor: pointer;
-    background: rgb(188, 77, 30);
+    background: rgb(186, 148, 71);
     border-radius: 10px;
 }
 .mb-2{
@@ -41,4 +47,75 @@
 .errror-feedback{
     color: red;
     margin-top: 8px;
+} */
+
+
+.login-container{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    background-color: rgb(230, 219, 219);
+    border-radius: 20px  ;
+    height: 400px;
+}
+.tittle{
+    text-align: center;
+    font-size: 23px;
+    font-weight: 600;
+    padding-top: 30px;
+
+}
+.text{
+    font-weight: 600;
+    padding-bottom: 3px;
+}
+.inputlogin{
+    padding: 12px 7px;
+    outline: none;
+    background: #1618230f;
+    margin-bottom: 7px;
+    border: #1618230f ;
+    border-radius: 3px;
+    width: 100%;
+
+
+    &:hover{
+        background-color: #dedede ;
+        
+    }
+}
+button{
+    width: 100%;
+    margin-top: 15px;
+    padding: 7px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    &.active {
+        background-color: #fe2c55;
+        color: white;
+    }
+
+}
+    button[disabled=disabled], button:disabled {
+        cursor: not-allowed;
+    }
+.back{
+    
+    text-align: center;
+    margin-top: 90px;
+    cursor: pointer;
+    
+}
+
+.input-2{
+    position: relative;
+    i {
+        cursor: pointer;
+        position: absolute;
+        top: 17px;
+        right: 10px;
+    }
+
+
 }
