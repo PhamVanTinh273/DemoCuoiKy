@@ -14,6 +14,7 @@ import { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 import { CartContext } from "../../Contexts/CartContext";
 import MenuCard from "../Menu/MenuCard";
+import { AuthProvider, useAuth } from "../AuthContext/AuthContext";
 
 
 
@@ -33,8 +34,8 @@ import MenuCard from "../Menu/MenuCard";
 
 
 function Navbar(){
-  const { handleSearchInputChange, handleSearchButtonClick, isLoading } =
-    useContext(CartContext);
+  const { isLoggedIn } = useAuth();
+
 
 
 
@@ -66,6 +67,7 @@ function Navbar(){
   );
     return(
         <>
+         
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
           <div className="container-fluid">
             <a className="navbar-brand" href="#">
@@ -116,19 +118,29 @@ function Navbar(){
                   //   />
                   // </div>
                 ))}
-              </section>
+
+               
+                </section>
                   
                   </div>
+                  {!isLoggedIn && (
+                <li>
                   <Link to="/login" style={{ textDecoration: 'none' }}>
-                        <div className='sign'>         
-                        <button className='sign'>
-                        <i class="fa-solid fa-arrow-right-from-bracket mt-1"></i>
-                            <div className='signin'>Singin</div>
-                        </button>
-                        </div>
-                    </Link>
+                              <div className='sign'>         
+                              <button className='sign'>
+                              <i class="fa-solid fa-arrow-right-from-bracket mt-1"></i>
+                                  <div className='signin'>Singin</div>
+                              </button>
+                              </div>
+                          </Link>
+                  
+                </li>
+        )}
+                  
                   
                     </ul>
+                
+              
                     
                 
 
@@ -157,6 +169,8 @@ function Navbar(){
             </CartContext.Provider>
                 
               </main>
+
+           
         
         
       </>

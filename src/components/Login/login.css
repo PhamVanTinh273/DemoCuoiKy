@@ -56,7 +56,18 @@
     margin: 0 auto;
     background-color: rgb(230, 219, 219);
     border-radius: 20px  ;
-    height: 400px;
+    height: 450px;
+    width: 30%;
+}
+.login-header{
+    text-align: center;
+    font-weight: 600;
+    padding-top: 50px;
+}
+
+.input-user-login{
+    text-align: center;
+    margin-top: 15px;
 }
 .tittle{
     text-align: center;
@@ -84,19 +95,24 @@
         
     }
 }
-button{
-    width: 100%;
-    margin-top: 15px;
+.button-login{
+    width: 40%;
+    height: 50px;
+    margin-top: 40px;
     padding: 7px;
     border-radius: 3px;
     outline: none;
     border: none;
-    &.active {
-        background-color: #fe2c55;
-        color: white;
+    margin-left: 130px;
+    position: relative;
+    
+    &:hover{
+        background-color: #dedede;
     }
+   
 
 }
+
     button[disabled=disabled], button:disabled {
         cursor: not-allowed;
     }
@@ -117,5 +133,21 @@ button{
         right: 10px;
     }
 
+
+}
+.createon-account{
+    text-align: center;
+    position: relative;
+    padding-top: 100px;
+}
+.input-login{
+    border: none;
+    outline: none;
+    width: 60%;
+    height: 40px;
+    border-radius: 3px;
+    &:hover{
+        background-color: #dedede;
+    }
 
 }

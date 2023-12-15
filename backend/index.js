@@ -8,7 +8,10 @@ const corsOptions = {
 
 app.use(express.json());
 app.use(cors(corsOptions));
+const bcrypt = require("bcryptjs");
 
+
+const users = [];
 
 const dogs = [
     {
@@ -160,6 +163,57 @@ const dogs = [
 
 
 
+app.post("/v1/users/register", async (req, res) => {
+  const { username, password } = req.body;
+
+  try {
+    // Check if the user already exists
+    const existingUser = users.find((user) => user.username === username);
+    if (existingUser) {
+      return res.status(400).json({ message: "Username already exists" });
+    }
+
+    // Hash the password
+    //"Hash the password" có nghĩa là thực hiện quá trình mã hóa mật khẩu bằng cách chuyển đổi mật khẩu từ dạng văn bản thông thường thành 
+    //một chuỗi ký tự không thể đọc ngược trở lại (hash). Mục đích của việc hash mật khẩu là bảo vệ thông tin cá nhân của người dùng và đảm bảo rằng mật khẩu không được lưu trữ dưới dạng gốc hoặc dễ dàng đoán được.
+    const salt = await bcrypt.genSalt(10);
+    const hashedPassword = await bcrypt.hash(password, salt);
+
+    // Create a new user
+    const newUser = { username, password: hashedPassword };
+    users.push(newUser);
+
+    res.status(201).json({ message: "User registered successfully" });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Internal server error" });
+  }
+});
+app.post("/v1/users/login", async (req, res) => {
+  const { username, password } = req.body;
+
+  try {
+    // Find the user by username
+    const user = users.find((user) => user.username === username);
+    if (!user) {
+      return res.status(401).json({ message: "Invalid credentials" });
+    }
+
+    // Check the password
+    const isPasswordValid = await bcrypt.compare(password, user.password);
+    if (!isPasswordValid) {
+      return res.status(401).json({ message: "Invalid credentials" });
+    }
+
+    res.status(200).json({ message: "Login successful" });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Internal server error" });
+  }
+});
+
+
+
 
 
 app.post('/v1/dogs', (req, res) => {
@@ -176,14 +230,14 @@ app.post('/v1/dogs', (req, res) => {
 });
 
 
-const POST = 8080;
+const PORT = 8080;
 app.get("/v1/dogs", (req,res)=>{
     res.status(200).json(dogs);
 
 
 
 });
-
-app.listen(POST,()=>{
-    console.log(`Server is running...${POST}`);
+app.use('/v1/users', require('./users'));
+app.listen(PORT,()=>{
+    console.log(`Server is running...${PORT}`);
 });
